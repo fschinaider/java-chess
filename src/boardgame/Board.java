@@ -17,13 +17,19 @@ public class Board {
 	public void setRows(int rows) {
 		this.rows = rows;
 	}
-	public int getClumns() {
+	public int getColumns() {
 		return columns;
 	}
-	public void setClumns(int clumns) {
+	public void setColumns(int clumns) {
 		this.columns = clumns;
 	}
 	
+	public Piece piece(int row, int column) {
+		return pieces[row][column];
+	}
 	
+	public Piece piece(Position position) {
+		return pieces[position.getRow()][position.getColumn()];
+	}
 	
 }
